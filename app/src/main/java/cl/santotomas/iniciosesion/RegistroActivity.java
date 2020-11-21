@@ -69,7 +69,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
                                         this.etRegistroClave.setText("");
                                         this.etRegistroRepetir.setText("");
 
-                                        Toast.makeText(this, "Usuario "+this.usuario.getNombre()+"registrado correctamente", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(this, "Usuario "+this.usuario.getNombre()+" registrado correctamente", Toast.LENGTH_LONG).show();
                                         Log.i("LOGPRUEBA", "Usuario "+this.usuario.getNombre()+" registrado correctamente");
                                         finish();
                                     } else {
@@ -96,7 +96,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private long registrar_usuario(){
-        AdminSQLiteOpenHelper base = new AdminSQLiteOpenHelper(this,"administracion1", null, 1);
+        AdminSQLiteOpenHelper base = new AdminSQLiteOpenHelper(this,"admin", null, 1);
         SQLiteDatabase baseDatos = base.getWritableDatabase();
 
         ContentValues registro = new ContentValues();
@@ -113,7 +113,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
 
     // Funcion Validar Correo ya ingresado
     private boolean buscar_usuario(){
-        AdminSQLiteOpenHelper base = new AdminSQLiteOpenHelper(this,"administracion1", null, 1);
+        AdminSQLiteOpenHelper base = new AdminSQLiteOpenHelper(this,"admin", null, 1);
         SQLiteDatabase baseDatos = base.getWritableDatabase();
 
         Cursor filas = baseDatos.rawQuery(

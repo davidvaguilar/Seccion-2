@@ -1,9 +1,10 @@
 package cl.santotomas.iniciosesion.modelo;
 
 public class Usuario {
-    private Integer id;
+
     private String nombre;
     private String email;
+    private String telefono;
     private String password;
 
     public String getPassword() {
@@ -14,12 +15,12 @@ public class Usuario {
         this.password = password;
     }
 
-    public Integer getId() {
-        return id;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public String getNombre() {
@@ -67,9 +68,10 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
+                "nombre='" + nombre + '\'' +
                 ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
